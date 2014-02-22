@@ -53,7 +53,7 @@ module Cqq
         WHERE s_dlints.id_legislatura = dl.id_legislatura) as avg_intervenciones
         FROM dip_legis dl, rel_dip_legis_diputados rd, rel_dip_legis_grupos rg, rel_dip_legis_circunscripciones rc,
         diputados d, grupos g, circunscripciones c, legislaturas l, dip_legis_intervenciones_stats dlints
-        WHERE d.id = 19
+        WHERE d.id = #{id_diputado}
         AND rd.id = d.id
         AND dl.id_diputado = rd.id_diputado
         AND dl.id_legislatura = l.id
