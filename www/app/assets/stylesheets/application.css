@@ -11,3 +11,33 @@
  *= require_self
  *= require_tree .
  */
+
+.ficha-diputado {
+    padding: 5px; 
+    border: 1px solid black; 
+    width: 220px; 
+    border-radius: 15px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    float: left;
+}
+
+.ficha-diputado .titulo {
+    text-align: center; 
+    font-weight: bold; 
+    font-size: 16px; 
+    margin-bottom: 5px
+}
+
+.ficha-diputado .imagen {
+    text-align: center
+}
+
+.ficha-diputado .info {
+    background-color: #eee; 
+    padding: 5px;
+}
+
+.ficha-diputado .info .partido {
+    text-align: center
+}
