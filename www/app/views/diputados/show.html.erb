@@ -1,13 +1,25 @@
 
-diputados -> show
+<h2>Información Diputado</h2>
 
-<%=@result.inspect%>
+<% count = @legs.count %>
 
+<p>Presente en <%= count %> legislaturas</p>
+
+<% primera_legislatura = @legs.first %>
+
+<% # Mostrar imagen %>
+
+<div>
+    <span style="font-weight: bold">Id: </span><span><%= primera_legislatura["id"] %></span><br/>
+    <span style="font-weight: bold">Legislatura: </span><span><%= primera_legislatura["descripcion"] %></span><br/>
+    <span style="font-weight: bold">Biografía: </span><span><%= primera_legislatura["substr"] %></span><br/>
+    <span style="font-weight: bold">Partido: </span><span><%= primera_legislatura["partido"] %></span><br/>
+</div>
 
 <% @legs.each do |l| %>
-  <br/>
-  <br/>
-  <%=l.inspect%>
-  <br/>
-  <br/>
+    <br/>
+    <br/>
+    <%=l.inspect%>
+    <br/>
+    <br/>
 <% end%>

@@ -20,7 +20,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-host="http://<%=request.host_with_port%>">
 
 <%= yield %>
 
