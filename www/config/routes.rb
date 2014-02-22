@@ -58,6 +58,6 @@ CongresoQuienEsQuien::Application.routes.draw do
 
   match 'diputado/:id' => 'diputados#show', :via => :get, :as => :diputado
   match 'diputados/csv' => 'csv#diputados', :via => :get, :as => :diputados_csv
-
+  match 'about' => 'home#about', :via => :get, :as => :about
 
 end

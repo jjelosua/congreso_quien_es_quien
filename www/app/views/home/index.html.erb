@@ -12,7 +12,7 @@
         <div class="title_graph">Grupos Parlamentarios</div>
         <div class="clearfix"></div>
       </div>
-      
+
       <div class="ccaa">
         <div class="title_graph">Comunidades Autónomas</div>
         <div class="clearfix"></div>
@@ -31,10 +31,14 @@ text-align: right;
 color: #888;">Haz click en los gráficos para filtrar los diputados por género, grupo parlamentario, legislatura o comunidad autónoma de su circunscripción.</div>
     </div>
 
+    <div style="position: absolute; right: 20px; top: 60px;">
+      <a href="<%= about_path %>">Acerca de</a>
+    </div>
+
     <div style="clear:both;">
       <div class="dc-data-count">
-        <span class="filter-count"></span> seleccionados de un total de 
-        <span class="total-count"></span> Diputados | 
+        <span class="filter-count"></span> seleccionados de un total de
+        <span class="total-count"></span> Diputados |
         <a href="javascript:dc.filterAll(); dc.renderAll();">Volver a empezar</a>
       </div>
     </div>
