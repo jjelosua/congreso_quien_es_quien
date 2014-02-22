@@ -130,7 +130,7 @@ function grid (selector,data) {
 }
 
 $(function() {
-    d3.csv("data/dip_congreso.csv", function(d) {return d;}
+    d3.csv("congresoquienesquien.herokuapp.com/diputados/csv", function(d) {return d;}
       ,function(error, rows) {
       grid ("#diputadoslist",rows);
       });      

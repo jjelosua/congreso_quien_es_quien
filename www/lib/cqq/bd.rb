@@ -4,7 +4,7 @@ module Cqq
     def initialize()
     end
 
-    def diputados()
+    def diputados_csv()
       ActiveRecord::Base.connection.execute("
         SELECT d.id, dl.id_diputado, (d.apellidos || ', ' || d.nombre) as nombre, d.genero, 
         dl.id_legislatura, trim(trailing from l.abrev) as leg_abrev, l.descripcion as leg_descripcion, 
