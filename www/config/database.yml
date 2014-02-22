@@ -23,6 +23,5 @@ production:
   encoding: unicode
   database: congreso
   pool: 5
-  username: javi
+  username: congresoquienesquien
   password:
-
