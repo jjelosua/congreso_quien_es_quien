@@ -1,25 +1,42 @@
+.header h1 {
+  font-size: 45px;
+  font-family: sans-serif;
+}
+
 div.title_graph {
   text-align: center;
   color: #3182BD;
   font-weight: bold;
 }
 
+#diputadoslist {
+  text-align: center;
+  width: 1100px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.genero, .ccaa, .grupo, .legis {
+  margin-left: 16px;
+}
+
 #diputadoslist table, .dc-data-grid {clear:both;}
 .dc-table-label {background: #F5F5F5; font-weight:bold; }
 .x line {stroke:none;}
 
+.dc-data-grid {
+  margin-top: 50px;
+}
+
 body {font-family: arial, helvetica, sans-serif;}
 
-.dc-data-grid, .dc-grid-group {clear:both}
-.dc-data-count {clear:both;}
-.dc-grid-group {
-  background-color: #F5F5F5;
-  border: 1px solid #E3E3E3;
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
-  margin-bottom: 20px;
-  min-height: 20px;
-  padding: 10px;
+.dc-data-grid, .dc-grid-group {clear:both;}
+.dc-data-count {
+  clear: both;
+  margin-left: 665px;
+  font-size: 13px;
+  float: right !important;
+  position: absolute;
 }
 
 .dc-grid-item>div {
@@ -34,7 +51,8 @@ body {font-family: arial, helvetica, sans-serif;}
   position:relative;
   float:left;
   min-height:300px;
-  margin:0 10px 5px 0;
+  margin-top: 15px;
+  margin-left: 15px;
   width:200px;
   background-color: #F8F8F8;
   border-color: #E7E7E7;
@@ -52,4 +70,64 @@ body {font-family: arial, helvetica, sans-serif;}
   font-size:12px;
   text-align: left;
 }
-.dc-grid-top h1 {font-size:22px;}
+.dc-grid-top h1 {
+  font-size: 16px;
+  text-align: left;
+  padding: 0px 10px;
+  height: 40px;
+  background: #eee;
+  line-height: 35px;
+  margin: 10px 15px;
+  width: 397px;
+  border-radius: 3px;
+  color:#666;
+}
+
+#loading {
+  margin: auto;
+  width: 130px;
+  margin-top: 100px;
+}
+
+#loading img {
+  width: 100px;
+}
+
+.header {
+  width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.content_filters {
+  height: 228px;
+  background: #fcfcfc;
+  padding: 10px;
+  padding-top: 20px;  
+
+  position: relative;
+  border: 4px solid #eee;
+}
+.content_filters:after, .content_filters:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.content_filters:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #fcfcfc;
+  border-width: 30px;
+  margin-left: -30px;
+}
+.content_filters:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-top-color: #eee;
+  border-width: 36px;
+  margin-left: -36px;
+}

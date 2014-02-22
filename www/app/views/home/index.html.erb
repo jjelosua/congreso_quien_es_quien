@@ -1,30 +1,51 @@
-<h1 class="page-header">Diputados del congreso en su historia reciente</h1>
-<p><b>Haz click en los gráficos para filtrar los diputados por género, grupo parlamentario, legislatura o comunidad autónoma de su circunscripción.</b></p>
+<div class="header">
+  <h1 class="page-header">Diputados del congreso en su historia reciente</h1>
+</div>
 
 
-<div id="diputadoslist">
-  <div class="legis">
-    <div class="title_graph">Legislaturas</div>
-    <div class="clearfix"></div>
-  </div>
-  <div class="grupo">
-    <div class="title_graph">Grupos Parlamentarios</div>
-    <div class="clearfix"></div>
-  </div>
-  
-  <div class="ccaa">
-    <div class="title_graph">Comunidades Autónomas</div>
-    <div class="clearfix"></div>
-  </div>
-  <div class="genero">
-    <div class="title_graph">Género</div>
-    <div class="clearfix"></div>
-  </div>
-  <div style="clear:both;">
-    <div class="dc-data-count">
-      <span class="filter-count"></span> seleccionados de un total de 
-      <span class="total-count"></span> Diputados | 
-      <a href="javascript:dc.filterAll(); dc.renderAll();">Volver a empezar</a>
+<div id="content">
+
+  <div id="diputadoslist">
+
+    <div class="content_filters">
+      <div class="legis">
+        <div class="title_graph">Legislaturas</div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="grupo">
+        <div class="title_graph">Grupos Parlamentarios</div>
+        <div class="clearfix"></div>
+      </div>
+      
+      <div class="ccaa">
+        <div class="title_graph">Comunidades Autónomas</div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="genero">
+        <div class="title_graph">Género</div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div style="position: absolute;
+position: absolute;
+top: 233px;
+width: 1069px;
+font-size: 11px;
+text-align: right;
+color: #888;">Haz click en los gráficos para filtrar los diputados por género, grupo parlamentario, legislatura o comunidad autónoma de su circunscripción.</div>
     </div>
+
+    <div style="clear:both;">
+      <div class="dc-data-count">
+        <span class="filter-count"></span> seleccionados de un total de 
+        <span class="total-count"></span> Diputados | 
+        <a href="javascript:dc.filterAll(); dc.renderAll();">Volver a empezar</a>
+      </div>
+    </div>
+    <div class="dc-data-grid"></div>
   </div>
-  <div class="dc-data-grid"></div>
+</div>
+
+<div id="loading">
+  <img src="/img/loader_white_big.gif"/>
+</div>

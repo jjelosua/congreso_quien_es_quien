@@ -121,8 +121,17 @@ function grid (selector,data) {
 }
 
 $(function() {
-    d3.csv($('body').data('host')+'/diputados/csv', function(d) {return d;}
-      ,function(error, rows) {
-      grid ("#diputadoslist",rows);
-      });      
+
+  $('#content').hide();
+  $('#loading').show();
+
+  d3.csv($('body').data('host')+'/diputados/csv', function(d) {return d;}
+    ,function(error, rows) {
+    grid ("#diputadoslist",rows);
+    console.log('ESTAMOS???');
+
+    $('#content').show();
+    $('#loading').hide();
+
+    });      
 });    
