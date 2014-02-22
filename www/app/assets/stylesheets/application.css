@@ -12,40 +12,65 @@
  *= require_tree .
  */
 
+.content_diputados {
+    width: 1250px;
+    margin: auto;
+}
+
 .ficha-diputado {
+    background: #F8F8F8;
     padding: 5px; 
-    border: 1px solid black; 
-    width: 220px; 
-    border-radius: 15px; 
+    /*border: 1px solid black; */
+    width: 210px; 
+    border-radius: 4px; 
     margin-left: 10px; 
-    margin-right: 10px; 
+    margin-right: 5px; 
     margin-bottom: 10px;
     float: left;
+    font-size: 13px;
+    font-family: arial;
+    padding: 10px;
 }
 
 .ficha-diputado .titulo {
     height: 40px;
-    text-align: center; 
-    font-weight: bold; 
-    font-size: 16px; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
     margin-bottom: 5px;
+    background: #6baed6;
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 230px;
+    border-radius: 2px;
+    line-height: 34px;
+    color: #fff;
 }
 
 .ficha-diputado .imagen {
-    text-align: center
+    text-align: center;
+    margin-top: 50px;
 }
 
 .ficha-diputado .info {
-    background-color: #eee; 
     padding: 5px;
+}
+
+.ficha-diputado .info div {
+    margin-top: 10px;
 }
 
 .ficha-diputado .info .bio {
     height: 300px; 
     overflow: auto;
+    color: #999;
 }
 
 .ficha-diputado .info .partido {
-    text-align: center;
     margin-top: 5px;
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-weight: bold;
 }

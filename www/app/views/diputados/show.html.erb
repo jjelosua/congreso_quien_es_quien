@@ -1,10 +1,11 @@
+<% content_for :title do %>- <%= @legs.first["nombre"] %><%end%> 
 
-<h2>Información Diputado</h2>
 
-<% count = @legs.count %>
-
-<p>Presente en <%= count %> legislaturas</p>
+<div class="content_diputados">
+<h2 style="margin-left:10px;"><%= @legs.first["nombre"] %> > Presente en <%= @legs.count %> legislaturas</h2>
 
 <% @legs.each do |legislatura| %>
     <%= render partial: "diputado", :locals => {legislatura: legislatura, id_diputado: params[:id] } %>
 <% end %>
+
+</div>

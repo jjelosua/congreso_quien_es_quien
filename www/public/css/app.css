@@ -40,7 +40,7 @@ body {font-family: arial, helvetica, sans-serif;}
 }
 
 .dc-grid-item>div {
-  padding:5px;
+  padding:12px;
   border-color: #E7E7E7;
   border-radius: 4px;
   text-align:center;
@@ -67,7 +67,7 @@ body {font-family: arial, helvetica, sans-serif;}
 .dc-grid-item img {width:135px;}
 .dc-grid-top h2 {font-size:14px;}
 .dc-grid-top div.details {
-  font-size:12px;
+  font-size:13px;
   text-align: left;
 }
 .dc-grid-top h1 {
@@ -75,12 +75,12 @@ body {font-family: arial, helvetica, sans-serif;}
   text-align: left;
   padding: 0px 10px;
   height: 40px;
-  background: #eee;
+  background: #6baed6;
   line-height: 35px;
   margin: 10px 15px;
   width: 397px;
   border-radius: 3px;
-  color:#666;
+  color:#fff;
 }
 
 #loading {

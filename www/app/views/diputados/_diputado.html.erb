@@ -1,16 +1,35 @@
 <div class="ficha-diputado">
-    <div class="titulo" style="" >
-        <%= legislatura["descripcion"] %>
+  <div class="titulo" style="" >
+      <%= legislatura["leg_descripcion"] %>
+  </div>
+  <div class="imagen">
+      <%= image_tag path_to_img(legislatura["foto"]) %>
+  </div>
+  <div class="info">
+    <div class="partido">
+        <%= legislatura["gr_nombre"] %>
     </div>
-    <div class="imagen">
-        <%= image_tag path_to_img(id_diputado, legislatura["id"]) %>
+
+    <div>
+        Cirscuncripción: <strong><%= format_bio(legislatura["circ_nombre"]) %></strong>
     </div>
-    <div class="info">
-        <div class="bio">
-            <%= format_bio(legislatura["substr"]) %>
-        </div>
-        <div class="partido">
-            <%= legislatura["partido"] %>
-        </div>
+    <div>
+      Iniciativas: <strong><%= (!legislatura["iniciativas"].blank? ? format_bio(legislatura["iniciativas"]) : '0') %></strong>
     </div>
+    <div>
+      Media de iniciativas en la legislatura por diputado: <strong><%= format_bio(legislatura["avg_iniciativas"]) %></strong>
+    </div>
+    <div>
+      Intervenciones: <strong><%= format_bio(legislatura["intervenciones"]) %></strong>
+    </div>
+    <div>
+      Media de intervenciones en la legislatura por diputado: <strong><%= format_bio(legislatura["avg_intervenciones"]) %></strong>
+    </div>    
+
+
+
+    <div class="bio">
+        <%= format_bio(legislatura["bio"]) %>
+    </div>
+  </div>
 </div>
