@@ -5,27 +5,18 @@
 
 <p>Presente en <%= count %> legislaturas</p>
 
-<% primera_legislatura = @legs.first %>
-
 <% 
-  id_diputado = 1
-  id_legislatura = primera_legislatura["id"]
+  id_diputado = params[:id] 
 %>
 
-<!-- Imagen diputado -->
-<%= image_tag path_to_img(id_diputado, id_legislatura) %>
-
-<div>
-    <span style="font-weight: bold">Id: </span><span><%= primera_legislatura["id"] %></span><br/>
-    <span style="font-weight: bold">Legislatura: </span><span><%= primera_legislatura["descripcion"] %></span><br/>
-    <span style="font-weight: bold">Biografía: </span><span><%= primera_legislatura["substr"] %></span><br/>
-    <span style="font-weight: bold">Partido: </span><span><%= primera_legislatura["partido"] %></span><br/>
-</div>
-
-<% @legs.each do |l| %>
-    <br/>
-    <br/>
-    <%=l.inspect%>
-    <br/>
-    <br/>
+<% 
+i = 0
+@legs.each do |legislatura|
+    if i % 4 == 0 %>
+        <div style="clear: both;"></div>
+<% 
+    end 
+    i = i + 1
+%>
+    <%= render partial: "diputado", :locals => {legislatura: legislatura, id_diputado: id_diputado } %>
 <% end%>
