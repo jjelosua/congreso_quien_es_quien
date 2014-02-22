@@ -109,6 +109,7 @@ function grid (selector,data) {
     .order(d3.descending)
     .renderlet(function (grid) {
       $("img.lazy-load").lazyload ({
+        event: 'scroll initial',
         effect : "fadeIn",
         threshold : 100
       })
@@ -121,7 +122,6 @@ function grid (selector,data) {
 }
 
 $(function() {
-
   $('#content').hide();
   $('#loading').show();
 
@@ -129,9 +129,9 @@ $(function() {
     ,function(error, rows) {
     grid ("#diputadoslist",rows);
     console.log('ESTAMOS???');
-
+    
     $('#content').show();
     $('#loading').hide();
-
+    $(document).trigger('initial');
     });      
 });    
