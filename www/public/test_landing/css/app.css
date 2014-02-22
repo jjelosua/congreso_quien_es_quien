@@ -1,0 +1,55 @@
+div.title_graph {
+  text-align: center;
+  color: #3182BD;
+  font-weight: bold;
+}
+
+#diputadoslist table, .dc-data-grid {clear:both;}
+.dc-table-label {background: #F5F5F5; font-weight:bold; }
+.x line {stroke:none;}
+
+body {font-family: arial, helvetica, sans-serif;}
+
+.dc-data-grid, .dc-grid-group {clear:both}
+.dc-data-count {clear:both;}
+.dc-grid-group {
+  background-color: #F5F5F5;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  margin-bottom: 20px;
+  min-height: 20px;
+  padding: 10px;
+}
+
+.dc-grid-item>div {
+  padding:5px;
+  border-color: #E7E7E7;
+  border-radius: 4px;
+  text-align:center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+
+.dc-grid-item {
+  position:relative;
+  float:left;
+  min-height:300px;
+  margin:0 10px 5px 0;
+  width:200px;
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+  border-radius: 4px;
+  text-align:center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+.dc-grid-item .bigtext {
+  width:200px;
+}
+/*.dc-grid-item img {width:135px;height:165px}*/
+.dc-grid-item img {width:135px;}
+.dc-grid-top h2 {font-size:14px;}
+.dc-grid-top div.details {
+  font-size:12px;
+  text-align: left;
+}
+.dc-grid-top h1 {font-size:22px;}
