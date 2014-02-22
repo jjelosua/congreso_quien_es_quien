@@ -7,4 +7,8 @@ module ApplicationHelper
     return PATH_TO_IMAGES + img_name;
   end
 
+  def format_bio(text)
+    return text.gsub("|", "<br/><br/>").html_safe
+  end
+
 end

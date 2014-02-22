@@ -39,5 +39,6 @@
 }
 
 .ficha-diputado .info .partido {
-    text-align: center
+    text-align: center;
+    margin-top: 5px;
 }
