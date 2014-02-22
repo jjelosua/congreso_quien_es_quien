@@ -1,4 +1,4 @@
-var tpl = _.template("<div><a href='diputado/<%= id %>'><img class='lazy-load' dsrc='blank.gif' data-original='data/img/<%= id_diputado %>_<%= id_legislatura %>.jpg' alt='<%= nombre %>' title='<%= gr_nombre %>, Circunscripcion: <%= circ_nombre %>.'/></a><h2 style='text-align:left;'><%= nombre %></h2><div class='details'>Partido: <%= partido %><br>Circunscripción: <%= circ_nombre %></div></div>");
+var tpl = _.template("<div><a href='diputado/<%= id %>'><img class='lazy-load' dsrc='blank.gif' data-original='data/img/<%= id_diputado %>_<%= id_legislatura %>.jpg' alt='<%= nombre %>' title='<%= gr_nombre %>, Circunscripcion: <%= circ_nombre %>.'/></a><h2 style='text-align:left;'><a href='diputado/<%= id %>'><%= nombre %></a></h2><div class='details'>Partido: <%= partido %><br>Circunscripción: <%= circ_nombre %></div></div>");
 
 function grid (selector,data) {
   var ndx = crossfilter(data),
