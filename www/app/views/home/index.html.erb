@@ -1,4 +1,30 @@
-HOME
+<h1 class="page-header">Diputados del congreso en su historia reciente</h1>
+<p><b>Haz click en los gráficos para filtrar los diputados por género, grupo parlamentario, legislatura o comunidad autónoma de su circunscripción.</b></p>
 
-<a href="<%=diputado_path(1)%>">Diputado 1</a>
 
+<div id="diputadoslist">
+  <div class="legis">
+    <div class="title_graph">Legislaturas</div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="grupo">
+    <div class="title_graph">Grupos Parlamentarios</div>
+    <div class="clearfix"></div>
+  </div>
+  
+  <div class="ccaa">
+    <div class="title_graph">Comunidades Autónomas</div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="genero">
+    <div class="title_graph">Género</div>
+    <div class="clearfix"></div>
+  </div>
+  <div style="clear:both;">
+    <div class="dc-data-count">
+      <span class="filter-count"></span> seleccionados de un total de 
+      <span class="total-count"></span> Diputados | 
+      <a href="javascript:dc.filterAll(); dc.renderAll();">Volver a empezar</a>
+    </div>
+  </div>
+  <div class="dc-data-grid"></div>

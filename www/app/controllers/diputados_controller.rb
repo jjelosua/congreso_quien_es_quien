@@ -2,8 +2,16 @@ class DiputadosController < ApplicationController
 
   def show
 
-    @result = ActiveRecord::Base.connection.execute('SELECT count(id_legislatura) as count FROM comisiones')
-    @result = @result.first
+    # @diputados = bd.diputados
+
+    # @diputados.each do |d|
+    #   p d.inspect
+    # end
+
+
+
+    # @result = ActiveRecord::Base.connection.execute('SELECT count(id_legislatura) as count FROM comisiones')
+    # @result = @result.first
 
   end
 
