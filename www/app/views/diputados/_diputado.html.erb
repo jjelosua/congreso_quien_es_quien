@@ -3,7 +3,9 @@
       <%= legislatura["leg_descripcion"] %>
   </div>
   <div class="imagen">
+    <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Diputados/BusqForm?_piref73_1333155_73_1333154_1333154.next_page=/wc/fichaDiputado&idLegislatura=<%=legislatura['id_legislatura']%>&idDiputado=<%=legislatura['id_diputado']%>" target="_blank">
       <%= image_tag path_to_img(legislatura["foto"]) %>
+    </a>
   </div>
   <div class="info">
     <div class="partido">
