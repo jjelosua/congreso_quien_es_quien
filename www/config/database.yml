@@ -9,7 +9,7 @@ development:
   encoding: unicode
   database: congreso
   pool: 5
-  username: javi
+  username: juan
   password:
 test:
   adapter: postgresql

@@ -43,7 +43,7 @@ function grid (selector,data) {
     .renderlet(function (chart) {});
 
 
-  var legislatura = ndx.dimension (function(d) {return d.leg_abrev;});
+  var legislatura = ndx.dimension (function(d) {return parseInt(d.id_legislatura);});
   
   var groupLegislatura = legislatura.group().reduceSum (function(d) {return 1;});
   var bar_legis = dc.barChart(selector + " .legis");
@@ -60,15 +60,6 @@ function grid (selector,data) {
     .yAxisLabel("#Diputados")
     .dimension(legislatura)
     .group(groupLegislatura);
-
-  bar_legis.on("postRender", function(c) {rotateLegisBarChartLabels();} );
-    
-  function rotateLegisBarChartLabels() {
-    d3.selectAll(selector+ ' .legis .axis.x text')
-      .style("text-anchor", "end" )
-      .attr("transform", function(d) { return "rotate(-90, -4, 9) "; });
-  }
-
   
   var ccaa = ndx.dimension(function(d) {return d.ccaa_abrev;});
   var groupCCAA   = ccaa.group().reduceSum (function(d) {return 1;});
@@ -106,7 +97,7 @@ function grid (selector,data) {
   dc.dataGrid(".dc-data-grid")
     .dimension(legislatura)
     .group(function (d) {
-        return d.id_legislatura;
+        return d.leg_abrev;
         })
     .size(5000)
     .html (function(d) { 

@@ -66,7 +66,9 @@ dc.dataGrid = function(parent, chartGroup) {
         .append("h1")
         .attr("class", LABEL_CSS_CLASS)
         .html(function(d) {
-          return _chart.keyAccessor()(d);
+          //TODO: Do this better next time
+          return d.values[0].leg_descripcion;
+          //return _chart.keyAccessor()(d);
         });
     }
 
