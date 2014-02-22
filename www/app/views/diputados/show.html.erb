@@ -7,7 +7,13 @@
 
 <% primera_legislatura = @legs.first %>
 
-<% # Mostrar imagen %>
+<% 
+  id_diputado = 1
+  id_legislatura = primera_legislatura["id"]
+%>
+
+<!-- Imagen diputado -->
+<%= image_tag path_to_img(id_diputado, id_legislatura) %>
 
 <div>
     <span style="font-weight: bold">Id: </span><span><%= primera_legislatura["id"] %></span><br/>
