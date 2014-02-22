@@ -6,6 +6,7 @@ CREATE TABLE legislaturas
   descripcion character varying(50),
   fef_constitucion date,
   fec_disolucion date,
+  abrev character (8),
   CONSTRAINT legislaturas_pk PRIMARY KEY (id)
 )
 WITH (
@@ -122,6 +123,7 @@ CREATE TABLE comunidades
 (
   id character (2) NOT NULL,
   nombre character varying(100) NOT NULL,
+  abrev character (4),
   CONSTRAINT comunidades_pk PRIMARY KEY (id)
 )
 WITH (
