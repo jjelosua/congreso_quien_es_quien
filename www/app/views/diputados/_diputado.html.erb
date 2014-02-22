@@ -1,12 +1,12 @@
 <div class="ficha-diputado">
-    <div class="titulo" >
+    <div class="titulo" style="" >
         <%= legislatura["descripcion"] %>
     </div>
     <div class="imagen">
         <%= image_tag path_to_img(id_diputado, legislatura["id"]) %>
     </div>
     <div class="info">
-        <div>
+        <div class="bio">
             <%= format_bio(legislatura["substr"]) %>
         </div>
         <div class="partido">

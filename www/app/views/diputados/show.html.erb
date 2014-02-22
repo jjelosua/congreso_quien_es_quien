@@ -5,18 +5,6 @@
 
 <p>Presente en <%= count %> legislaturas</p>
 
-<% 
-  id_diputado = params[:id] 
-%>
-
-<% 
-i = 0
-@legs.each do |legislatura|
-    if i % 4 == 0 %>
-        <div style="clear: both;"></div>
-<% 
-    end 
-    i = i + 1
-%>
-    <%= render partial: "diputado", :locals => {legislatura: legislatura, id_diputado: id_diputado } %>
-<% end%>
+<% @legs.each do |legislatura| %>
+    <%= render partial: "diputado", :locals => {legislatura: legislatura, id_diputado: params[:id] } %>
+<% end %>

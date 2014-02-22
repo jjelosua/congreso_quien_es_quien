@@ -19,14 +19,16 @@
     border-radius: 15px; 
     margin-left: 10px; 
     margin-right: 10px; 
+    margin-bottom: 10px;
     float: left;
 }
 
 .ficha-diputado .titulo {
+    height: 40px;
     text-align: center; 
     font-weight: bold; 
     font-size: 16px; 
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .ficha-diputado .imagen {
@@ -36,6 +38,11 @@
 .ficha-diputado .info {
     background-color: #eee; 
     padding: 5px;
+}
+
+.ficha-diputado .info .bio {
+    height: 300px; 
+    overflow: auto;
 }
 
 .ficha-diputado .info .partido {
