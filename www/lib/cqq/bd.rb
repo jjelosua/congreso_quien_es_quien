@@ -31,11 +31,44 @@ module Cqq
 
     def legislaturas_diputado(id_diputado)
       ActiveRecord::Base.connection.execute("
-       SELECT l.id, l.descripcion, substr(dl.bio, 0, 512), dl.partido
-       FROM dip_legis dl
-       LEFT JOIN legislaturas l  ON l.id=dl.id_legislatura
-       WHERE dl.id_diputado=#{id_diputado}
-       ORDER BY l.id
+        SELECT d.id, dl.id_diputado, (d.apellidos || ', ' || d.nombre) as nombre, substring(dl.bio from 1 for 500) as bio,
+        dl.foto, dl.id_legislatura, l.descripcion as leg_descripcion,
+        g.id_grupo, g.nombre as gr_nombre,
+        c.id_circunscripcion, c.nombre as circ_nombre,
+        (SELECT SUM(iniciativas)
+        FROM dip_legis s_dl, rel_dip_legis_diputados s_rd, diputados s_d, dip_legis_iniciativas_stats s_dlinis
+        WHERE s_d.id = d.id AND s_dl.id_legislatura = dl.id_legislatura
+        AND s_dl.id_legislatura = s_rd.id_legislatura
+        AND s_dl.id_diputado = s_rd.id_diputado
+        AND s_rd.id = s_d.id
+        AND s_dl.id_legislatura = s_dlinis.id_legislatura
+        AND s_dl.id_diputado = s_dlinis.id_diputado
+        GROUP BY s_d.id, s_dl.id_legislatura, s_dl.id_diputado) as iniciativas,
+        (SELECT round(AVG(iniciativas),2)
+        FROM dip_legis_iniciativas_stats s_dlinis 
+        WHERE s_dlinis.id_legislatura = dl.id_legislatura) as avg_iniciativas,
+        dlints.intervenciones,
+        (SELECT round(AVG(intervenciones),2)
+        FROM dip_legis_intervenciones_stats s_dlints 
+        WHERE s_dlints.id_legislatura = dl.id_legislatura) as avg_intervenciones
+        FROM dip_legis dl, rel_dip_legis_diputados rd, rel_dip_legis_grupos rg, rel_dip_legis_circunscripciones rc,
+        diputados d, grupos g, circunscripciones c, legislaturas l, dip_legis_intervenciones_stats dlints
+        WHERE d.id = 19
+        AND rd.id = d.id
+        AND dl.id_diputado = rd.id_diputado
+        AND dl.id_legislatura = l.id
+        AND dl.id_legislatura = rd.id_legislatura
+        AND dl.id_diputado = rd.id_diputado
+        AND rd.id = d.id
+        AND dl.id_legislatura = rg.id_legislatura
+        AND dl.id_diputado = rg.id_diputado
+        AND rg.id_legislatura = g.id_legislatura
+        AND rg.id_grupo = g.id_grupo
+        AND dl.id_legislatura = rc.id_legislatura
+        AND dl.id_diputado = rc.id_diputado
+        AND rc.id_circunscripcion = c.id_circunscripcion
+        AND dl.id_legislatura = dlints.id_legislatura
+        AND dl.id_diputado = dlints.id_diputado;
         ");
     end
 
