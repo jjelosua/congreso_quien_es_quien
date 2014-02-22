@@ -2,3 +2,12 @@
 diputados -> show
 
 <%=@result.inspect%>
+
+
+<% @legs.each do |l| %>
+  <br/>
+  <br/>
+  <%=l.inspect%>
+  <br/>
+  <br/>
+<% end%>

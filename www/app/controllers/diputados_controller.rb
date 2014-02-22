@@ -8,6 +8,8 @@ class DiputadosController < ApplicationController
     #   p d.inspect
     # end
 
+    @legs = bd.legislaturas_diputado(params[:id])
+
 
 
     # @result = ActiveRecord::Base.connection.execute('SELECT count(id_legislatura) as count FROM comisiones')
