@@ -122,15 +122,18 @@ function grid (selector,data) {
 }
 
 $(function() {
-  $('#content').hide();
-  $('#loading').show();
+  //Execute only when visiting home page
+  if ($(location).attr('pathname') == "/") {
+    $('#content').hide();
+    $('#loading').show();
 
-  d3.csv($('body').data('host')+'/diputados/csv', function(d) {return d;}
-    ,function(error, rows) {
-    grid ("#diputadoslist",rows);
+    d3.csv($('body').data('host')+'/diputados/csv', function(d) {return d;}
+      ,function(error, rows) {
+      grid ("#diputadoslist",rows);
     
-    $('#content').show();
-    $('#loading').hide();
-    $(document).trigger('initial');
-    });      
+      $('#content').show();
+      $('#loading').hide();
+      $(document).trigger('initial');
+    });   
+  }   
 });    
