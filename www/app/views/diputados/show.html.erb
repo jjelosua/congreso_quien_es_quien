@@ -1,6 +1,8 @@
 <% content_for :title do %>- <%= @legs.first["nombre"] %><%end%> 
 
-
+<div style="position:absolute; left:10px; top:30px">
+  <a href="<%= root_path %>">Volver</a>
+</div>
 <div class="content_diputados">
     <h2 style="margin-left:10px;"><%= @legs.first["nombre"] %> > Presente en <%= @legs.count %> <%= @legs.count == 1 ? "legislatura" : "legislaturas" %></h2>
 
